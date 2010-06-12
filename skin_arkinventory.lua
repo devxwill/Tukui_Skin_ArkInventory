@@ -47,34 +47,6 @@ do
 	
 	TukuiDB:SetTemplate( _G["ARKINV_Frame4Log"] )
 	
-	--[[ hook the borders 
-	ArkInventory.Frame_Border_Paint_ = ArkInventory.Frame_Border_Paint
-	ArkInventory.Frame_Border_Paint = function( border, slot, file, size, offset, scale, r, g, b, a )
-		local otheroffset = 5
-		if slot then otheroffset = 0 end
-	
-		local parentname = border:GetParent( ):GetName( )
-	
-		local offset = offset * scale
-	
-		border:SetBackdrop({
-	  		edgeFile = TukuiDB["media"].blank, 
-	  		edgeSize = TukuiDB.mult, 
-	  		--insets = { left = -TukuiDB.mult, right = -TukuiDB.mult, top = -TukuiDB.mult, bottom = -TukuiDB.mult}
-		})
-		border:SetBackdropColor( unpack( TukuiDB["media"].backdropcolor ) )
-		
-		if r == 0.3 then
-			border:SetBackdropBorderColor( unpack(  TukuiDB["media"].bordercolor ) )
-		else
-			border:SetBackdropBorderColor( r or 0, g or 0, b or 0, a or 1 )
-		end
-	
-		border:ClearAllPoints( )
-		border:SetPoint( "TOPLEFT", parentname, 0 - offset + otheroffset, offset - otheroffset )
-		border:SetPoint( "BOTTOMRIGHT", parentname, offset - otheroffset, 0 - offset + otheroffset )
-	end]]
-	
 	-- hook the anchors
 	ArkInventory.Frame_Main_Anchor_Set_ = ArkInventory.Frame_Main_Anchor_Set
 	ArkInventory.Frame_Main_Anchor_Set = function( loc_id, rescale )
