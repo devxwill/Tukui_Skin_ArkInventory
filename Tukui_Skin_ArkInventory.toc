@@ -1,0 +1,6 @@
+## Interface: 30300
+## Title: |cffC495DDTukui Skin|r ArkInventory
+## Author: Mankar
+## RequiredDeps: Tukui, ArkInventory
+
+skin_arkinventory.lua
