@@ -2,7 +2,6 @@
     ArkInventory skin for TukUI by Mankar - Runetotem
 	Special thanks to Darth Android / Telroth-Black Dragonflight for their Editless Skins
     Skins ArkInventory windows to fit TukUI
-    All overridden options are removed from Skada's config to reduce confusion
 
     TODO:
      + Add Integration options
@@ -12,7 +11,6 @@ if (TukuiDB == nil or ArkInventory == nil) then return; end
 TukuiDB.skins = TukuiDB.skins or {}
 TukuiDB.skins.ArkInventory = TukuiDB.skins.ArkInventory or {}
 local ArkInventory = ArkInventory
---local L = LibStub( "AceLocale-3.0" ):GetLocale( "ArkInventory" )
 local _G = _G
 
 do
