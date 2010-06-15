@@ -1,7 +1,7 @@
 ## Interface: 30300
 ## Title: |cffC495DDTukui Skin|r ArkInventory
 ## Author: Mankar - Runetotem
-## Version: 1.0
+## Version: 2.0
 ## eMail: devxwill@gmail.com
 ## RequiredDeps: Tukui, ArkInventory
 
