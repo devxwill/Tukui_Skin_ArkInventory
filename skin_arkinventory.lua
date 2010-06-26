@@ -6,9 +6,9 @@
     New Options in config.lua
 	TukuiDB["skins"] {
 		ArkInventory {
-			Right = {1, 2, 6, 7, 8, 9}
-			Left = {3, 4, 5}
-		}
+			Right = {1, 2, 6, 7, 8, 9},
+			Left = {3, 4, 5},
+		},
 	}
 
 	The above tells which windows will lock to which side of the screen
@@ -33,7 +33,7 @@ if ArkInventory == nil then return end
 
 -- Update the GameToolTip to appear above then AI frames when visible
 local function gtUpdate( self, ... )
-	local af = InfoRight
+	local af = TukuiInfoRight
 	local scale = 4
 	
 	for _, value in pairs( r ) do
@@ -318,7 +318,7 @@ ArkInventory.Frame_Main_Anchor_Set = function( loc_id, rescale )
 	f5:ClearAllPoints( )
 		
 	if tblContains(l, loc_id) then
-		frame:SetPoint( "BOTTOMLEFT", InfoLeft, "TOPLEFT", 0, TukuiDB:Scale( 5 ) )
+		frame:SetPoint( "BOTTOMLEFT", TukuiInfoLeft, "TOPLEFT", 0, TukuiDB:Scale( 5 ) )
 			
 		f5:SetPoint( "BOTTOMLEFT", frame )
 		f5:SetPoint( "RIGHT", frame )
@@ -335,7 +335,7 @@ ArkInventory.Frame_Main_Anchor_Set = function( loc_id, rescale )
 		f1:SetPoint( "BOTTOMLEFT", f2, "TOPLEFT", 0, -3 )
 		f1:SetPoint( "RIGHT", frame )
 	else
-		frame:SetPoint( "BOTTOMRIGHT", InfoRight, "TOPRIGHT", 0, TukuiDB:Scale( 5 ) )
+		frame:SetPoint( "BOTTOMRIGHT", TukuiInfoRight, "TOPRIGHT", 0, TukuiDB:Scale( 5 ) )
 			
 		f5:SetPoint( "BOTTOMRIGHT", frame )
 		f5:SetPoint( "LEFT", frame )
